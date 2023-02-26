@@ -1,0 +1,3 @@
+/Users/LeMac/Code_projects/Git/myGrep/cmake-build-debug/CMakeFiles/myGrep.dir
+/Users/LeMac/Code_projects/Git/myGrep/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/LeMac/Code_projects/Git/myGrep/cmake-build-debug/CMakeFiles/rebuild_cache.dir
