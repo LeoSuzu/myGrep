@@ -13,7 +13,7 @@ using namespace std;
 
 void print_usage();
 void strGrep(string& pattern, string& filename);
-int occur(string& pattern, string& filename, bool reverse);
+int occur(string& pattern, string& filename, bool reverse, bool ignore_case)
 void fileGrep(string& pattern, string& filename, bool lineNum,
                bool occurrences, bool ignore_case, bool reverse_match);
 
@@ -98,10 +98,10 @@ void fileGrep(string& pattern, string& filename, bool lineNum, bool occurrences,
         // Option "o" is true it will print number of occurences patter match
         if (occurrences) {
             if (reverse_match){
-                cout << "Occurrences of lines NOT containing "<< pattern <<  ": " << occur(pattern, filename, reverse_match) << endl;
+                cout << "Occurrences of lines NOT containing "<< pattern <<  ": " << occur(pattern, filename, reverse_match, ignore_case) << endl;
             }
             else{
-                cout << "Occurrences of lines containing "<< pattern <<  ": " << occur(pattern, filename, reverse_match) << endl;
+                cout << "Occurrences of lines containing "<< pattern <<  ": " << occur(pattern, filename, reverse_match, ignore_case) << endl;
             }
 
         }
@@ -114,13 +114,17 @@ void fileGrep(string& pattern, string& filename, bool lineNum, bool occurrences,
 
 
 //Function to print occurrences. This is Int function witch will return number of match
-int occur(string& pattern, string& filename, bool reverse) {
-
+int occur(string& pattern, string& filename, bool reverse, bool ignore_case) {
     // Open file. Not necessary to check because this will used inside other function
     ifstream file(filename);
     string line;
     int count = 0;
     while (getline(file, line)) {
+        if (ignore_case) {
+            // convert both the pattern and line to lowercase
+            transform(pattern.begin(), pattern.end(), pattern.begin(), ::tolower);
+            transform(line.begin(), line.end(), line.begin(), ::tolower);
+        }
         if (reverse) {
             if (line.find(pattern) == string::npos) {
                 ++count;
@@ -136,6 +140,11 @@ int occur(string& pattern, string& filename, bool reverse) {
     file.close();
     return count;
 }
+This modification adds an if statement to check if ignore_case is true. If it is, then both the pattern and the line are converted to lowercase using the transform function. This ensures that the search is not case sensitive.
+
+
+
+
 
 void print_usage() {
     cout << "If enter less than three arguments does not execute anything.\n";

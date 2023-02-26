@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/LeMac/Code_projects/Git/myGrep/cmake-build-debug"
+			"value" : "/Users/LeMac/Code_projects/Git/GitHub/public/myGrep/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -479,7 +479,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/LeMac/Code_projects/Git/myGrep/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/Users/LeMac/Code_projects/Git/GitHub/public/myGrep/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -539,7 +539,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/LeMac/Code_projects/Git/myGrep"
+			"value" : "/Users/LeMac/Code_projects/Git/GitHub/public/myGrep"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -1111,7 +1111,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/LeMac/Code_projects/Git/myGrep/cmake-build-debug"
+			"value" : "/Users/LeMac/Code_projects/Git/GitHub/public/myGrep/cmake-build-debug"
 		},
 		{
 			"name" : "myGrep_IS_TOP_LEVEL",
@@ -1135,7 +1135,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/LeMac/Code_projects/Git/myGrep"
+			"value" : "/Users/LeMac/Code_projects/Git/GitHub/public/myGrep"
 		}
 	],
 	"kind" : "cache",
